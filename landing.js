@@ -61,13 +61,13 @@ function showToast(message, isSuccess = true) {
 document.addEventListener("click", (e) => {
   const addBtn = e.target.closest(".add-btn");
   if (addBtn) {
-    window.location.href = "./Completo.html";
+    window.location.href = "./catalogo.html";
     e.preventDefault();
   }
   // botón "Explorar tienda" / "Tienda completa"
   if (e.target.closest("#exploreBtn") || e.target.closest("#shopDemoBtn")) {
     e.preventDefault();
-    window.location.href = "./Completo.html";
+    window.location.href = "./catalogo.html";
   }
   if (e.target.closest("#offersBtn")) {
     e.preventDefault();
