@@ -156,10 +156,10 @@ async function generateQuotePDF() {
   doc.setTextColor(0, 0, 0);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(26);
-  doc.text('TechSound', 20, 30);
+  doc.text('ZonaTec', 20, 30);
   doc.setFontSize(10);
   doc.setTextColor(100, 100, 100);
-  doc.text('Cotización oficial · Tecnología con estilo', 20, 40);
+  doc.text('Cotización oficial', 20, 40);
   doc.setTextColor(29, 185, 84);
   doc.setFontSize(12);
   doc.text(`Fecha: ${fecha}`, 20, 55);
@@ -197,15 +197,15 @@ async function generateQuotePDF() {
   doc.text(`TOTAL: $${total.toFixed(2)}`, 20, y);
   doc.setFontSize(9);
   doc.setTextColor(120, 120, 120);
-  doc.text('Gracias por confiar en TechSound · La tecnología suena diferente', 20, y + 12);
+  doc.text('Gracias por confiar en ZonaTec', 20, y + 12);
   doc.setTextColor(140, 140, 140);
   doc.text('*Cotización generada electrónicamente. Válida por 7 días.', 20, y + 24);
 
   doc.setFillColor(29, 185, 84);
   doc.circle(190, 25, 4, 'F');
 
-  doc.save(`TechSound_cotizacion_${Date.now()}.pdf`);
-  showToast('📄 PDF generado correctamente', true);
+  doc.save(`ZonaTec_${Date.now()}.pdf`);
+  showToast('PDF generado correctamente', true);
 }
 
 // ---------- LÓGICA DE BÚSQUEDA Y FILTROS ----------
