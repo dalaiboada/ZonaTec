@@ -61,16 +61,13 @@ function showToast(message, isSuccess = true) {
 document.addEventListener("click", (e) => {
   const addBtn = e.target.closest(".add-btn");
   if (addBtn) {
-    const productName = addBtn.getAttribute("data-name") || "producto";
-    showToast(`✨ Añadido: ${productName} al carrito (demo)`);
+    window.location.href = "./Completo.html";
     e.preventDefault();
   }
   // botón "Explorar tienda" / "Tienda completa"
-  if (e.target.closest("#exploreBtn") || e.target.closest("#shopDemoBtn") || e.target.closest("#viewAllLink")) {
+  if (e.target.closest("#exploreBtn") || e.target.closest("#shopDemoBtn")) {
     e.preventDefault();
-    showToast("🚀 Demo: Página de tienda completa con búsqueda y filtros", true);
-    // desplazamiento suave a productos destacados (para mostrar que existe)
-    document.getElementById("productos-destacados")?.scrollIntoView({ behavior: "smooth" });
+    window.location.href = "./Completo.html";
   }
   if (e.target.closest("#offersBtn")) {
     e.preventDefault();
